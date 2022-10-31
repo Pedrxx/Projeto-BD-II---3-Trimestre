@@ -4,7 +4,7 @@ mcXAMPPinho
 <center>
 [Gustavo](#) | [Renam](#) | [Pablo](https://github.com/PabloDomiciano) | [Pedro](https://github.com/Pedrxx) | [Márcio](https://github.com/MarcioJCarvalho)
 </center>
-
+Barra de progresso <progress value=”90" max=”100"></progress>
 ### TRIGGERS
 01- Escreva quatro triggers de sintaxe - a trigger não precisa ter funcionalidade, basta não dar erro de sintaxe. Use variável global para testar.
 - Faça uma declarando variáveis e com select into; 
@@ -30,13 +30,14 @@ CREATE TRIGGER sintaxe_trigger
 - Evento?
 - Precisa de variáveis? Quais?
 - Implemente a trigger. 
-```bash
+
 A) Item_venda.
 B) Pode ser associado a qualquer tempo, before ou after.
 C) UPDATE
 D) Sim, estoque.
 C) ...
 
+```mysql
 DELIMITER // 
 CREATE TRIGGER atualiza_estoque
 AFTER INSERT ON item_venda FOR EACH ROW
@@ -47,7 +48,7 @@ END;
 DELIMITER ;
 ```
 
-```bash
+```mysql
 DELIMITER // 
 CREATE TRIGGER retorna_erro
 BEFORE INSERT ON produto 
@@ -66,7 +67,7 @@ DELIMITER ;
 - Tempo?
 - Evento?
 - Implemente a trigger (pode criar a tabela de auditoria)
-```bash
+```mysql
 DELIMITER // 
 CREATE TRIGGER select_into 
 BEFORE INSERT ON venda FOR EACH ROW
@@ -85,7 +86,7 @@ DELIMITER ;
 - Tempo?
 - Evento?
 - Implemente a trigger
-```bash
+```mysql
 DELIMITER // 
 CREATE TRIGGER impedir_desconto_maior_que_metade_do_preco
 BEFORE INSERT ON produto FOR EACH ROW
@@ -105,7 +106,7 @@ DELIMITER ;
 - Faça a segunda com uma estrutura de decisão; 
 - Faça a terceira que gere erro, impedindo a ação;
 - Faça a quarta com if e else. 
-```bash
+```mysql
 DELIMITER //
 CREATE PROCEDURE atualiza_estoque(id_produto INT, qtde_comprada INT, valor_unit DECIMAL(9,2))
 BEGIN
@@ -121,7 +122,7 @@ DELIMITER ;
 ```
 
 02 - Escreva uma procedure que registre a baixa de um produto e já atualize devidamente o estoque do produto. Antes das ações, verifique se o produto é ativo.
-```bash
+```mysql
 DELIMITER //
 CREATE PROCEDURE inserir_venda_ativo(ID_PRODUTO INT, QUANTIDADE INT)
 BEGIN
@@ -144,11 +145,11 @@ DELIMITER ;
 ```
 
 03 - Escreva uma procedure que altere o preço de um produto vendido (venda já realizada - necessário verificar a existência da venda). Não permita altearções abusivas - preço de venda abaixo do preço de custo. É possível implementar esta funcionalidade sem a procedure? Se sim, indique como, bem como as vantagens e desvantagens.
-```bash
+```mysql
 ```
 
 04 - Escreva uma procedure que registre vendas de produtos e já defina o total da venda. É possível implementar a mesma funcionalidade por meio da trigger? Qual seria a diferença?
-```bash
+```mysql
 DELIMITER //
 	CREATE PROCEDURE registrar_venda(id_produto INT, id_venda INT, quatidade INT, preco_unidade DECIMAL(8,2))
 	BEGIN
@@ -165,9 +166,9 @@ DELIMITER ;
 
 5- Para o controle de salário de funcionários de uma empresa e os respectivos adiantamentos (vales):
  - quais tabelas são necessárias?
- ```bash
+ 
 R: tabela pagamento e funcionario
-
+```mysql
 DELIMITER //
 CREATE PROCEDURE table_pagamento
 BEGIN
@@ -186,11 +187,11 @@ DELIMITER ;
 ```
 
 06- De acordo com o seu projeto de banco de dados, pense em pelo menos 3 procedures úteis. Discuta com os seus colegas em relação a relevância e implemente-as.
-```bash
+```mysql
 ```
 
 07- Explique as diferenças entre trigger, função e procedure. Indique as vantagens e desvantagens em utilizar a procedure.
-```bash
+```text
 Uma função precisa ser chamada manualmente e deve obrigatoriamente ter retorno, diferente de uma procedure que como o próprio nome diz, trata-se de um procedimento, logo não é necessário retorno. Já a trigger, "gatilho" em português, tem esse nome porque é "disparada" sempre que determinado evento ocorre no banco de dados, não precisando ser chamada diretamente como as outras citadas.
 A grande vantagem de se utilizar Stored Procedures é a produtividade, que leva diretamente à facilidade de manutenção, facilidade de uso e escalabilidade, pois imagine que ao invés de criar códigos no backend da aplicação e\ou realizar vários comandos para manipular os dados de um banco você pudesse construir uma rotina dinâmica que pode ou não receber parâmetros para ser executada sempre que quiser, podendo ser reutilizada infinitamente: isso são Procedures. Porém, isso traz também a pequena desvantagem que é a dificuldade na escrita (pois a sintaxe não é tão conhecida) 
 ```
