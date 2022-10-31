@@ -1,9 +1,9 @@
 <h1 align="center">
 mcXAMPPinho
 </h1>
-<p align="center">
+<center>
 [Gustavo](#) | [Renam](#) | [Pablo](https://github.com/PabloDomiciano) | [Pedro](https://github.com/Pedrxx) | [Márcio](https://github.com/MarcioJCarvalho)
-</p>
+</center>
 
 ### TRIGGERS
 01- Escreva quatro triggers de sintaxe - a trigger não precisa ter funcionalidade, basta não dar erro de sintaxe. Use variável global para testar.
@@ -11,7 +11,7 @@ mcXAMPPinho
 - Faça a segunda com uma estrutura de decisão; 
 - Faça a terceira que gere erro, impedindo a ação;
 - Faça a quarta que utilize a variável new e old - tente diferenciar. 
-```bash
+```mysql
 DELIMITER // 
 CREATE TRIGGER sintaxe_trigger 
 	AFTER 
