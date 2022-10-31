@@ -1,7 +1,9 @@
-
-# mcXAMPPinho
-
+<h1 align="center">
+mcXAMPPinho
+</h1>
+<p align="center">
 [Gustavo](#) | [Renam](#) | [Pablo](https://github.com/PabloDomiciano) | [Pedro](https://github.com/Pedrxx) | [Márcio](https://github.com/MarcioJCarvalho)
+</p>
 
 ### TRIGGERS
 01- Escreva quatro triggers de sintaxe - a trigger não precisa ter funcionalidade, basta não dar erro de sintaxe. Use variável global para testar.
