@@ -1,14 +1,9 @@
 <h1 align="center">
 mcXAMPPinho
 </h1>
-<div align="center">
-    <a herf="#">Gustavo</a> |
-    <a herf="#">Renam</a> |
-    <a herf="https://github.com/PabloDomiciano">Pablo</a> |
-    <a herf="https://github.com/Pedrxx">Pedro</a> |
-    <a herf="https://github.com/MarcioJCarvalho">Márcio</a> |
+
 [Gustavo](#) | [Renam](#) | [Pablo](https://github.com/PabloDomiciano) | [Pedro](https://github.com/Pedrxx) | [Márcio](https://github.com/MarcioJCarvalho)
-</div>
+
 
 ### TRIGGERS
 01- Escreva quatro triggers de sintaxe - a trigger não precisa ter funcionalidade, basta não dar erro de sintaxe. Use variável global para testar.
